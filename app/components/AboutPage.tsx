@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Award, Users, Film, Camera } from 'lucide-react';
 import Image from 'next/image'; // Import the Image component

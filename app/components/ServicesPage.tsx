@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Video, Camera, Edit, Mic, Film, Palette, Users, Award } from 'lucide-react';
 

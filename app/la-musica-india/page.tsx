@@ -1,3 +1,5 @@
+
+'use client'
 import LaMusicaIndiaPage from '../components/LaMusicaIndiaPage'
 
 const page = () => {
