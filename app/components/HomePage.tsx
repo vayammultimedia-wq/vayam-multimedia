@@ -12,7 +12,7 @@ const getImageSrc = (img: string, width: number = 1200) => {
 };
 
 const featuredMovies = [
-  { id: 1, title: "Prem", genre: "Drama", year: "2025", rating: 9.0, image: "prem.png", description: "A heartwarming tale of love, friendship, and self-discovery" },
+  { id: 1, title: "banjar", genre: "Drama", year: "2025", rating: 9.0, image: "banjar.jpg", description: "A heartwarming tale of love, friendship, and self-discovery" },
   { id: 2, title: "Sangvi", genre: "Thriller", year: "2025", rating: 8.5, image: "sangvi.png", description: "A captivating short film exploring themes of hope and resilience" },
   { id: 3, title: "comming soon", genre: "coming", year: "2024", rating: 8.9, image: "photo-1489599511986-c2d4d2d0e8b8", description: "A powerful story of music, loss, and redemption" }
 ];
@@ -47,7 +47,7 @@ const HomePage = () => {
         <div className="relative z-20 h-full flex items-center justify-center text-center px-6">
           <div className="max-w-6xl">
             <h1 className="text-5xl md:text-9xl font-black text-white mb-8">
-              <span className="bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r  from-cyan-400 via-cyan-500 to-cyan-600 bg-clip-text text-transparent">
                 VAYAM
               </span><br />
               <span className="text-white">Multimedia</span>
@@ -70,6 +70,9 @@ const HomePage = () => {
               <Link href="/contact" className="px-10 py-5 border-2 border-cyan-500 text-cyan-500 font-bold rounded-lg">
                 START YOUR PROJECT
               </Link>
+              <Link href="/upcoming-movie" className="px-10 py-5 bg-gradient-to-r from-teal-500 to-green-500 text-white font-bold rounded-lg">
+                UPCOMING MOVIE
+              </Link>
             </div>
           </div>
         </div>
@@ -88,10 +91,10 @@ const HomePage = () => {
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <div className="flex" style={{ transform: `translateX(-${currentSlide * 100}%)`, transition: "0.7s" }}>
               {featuredMovies.map((movie) => (
-                <div key={movie.id} className="w-full relative flex-shrink-0">
+                <div key={movie.id} className="w-full relative shrink-0">
                   <div className="relative h-96 md:h-[500px]">
                     <Image src={getImageSrc(movie.image, 1200)} alt={movie.title} fill className="object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
 
                     <div className="absolute inset-0 flex items-center">
                       <div className="max-w-7xl mx-auto px-6">

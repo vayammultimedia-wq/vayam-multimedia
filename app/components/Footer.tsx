@@ -10,9 +10,9 @@ const Footer = () => (
         <div>
           <div className="mb-4">
            <img 
-  src="/Logo.png" 
+  src="/Logo2.png" 
   alt="Vayam Multimedia Logo" 
-  className="h-10 w-auto object-contain scale-[2.5] origin-left" 
+  className="h-15 w-auto object-contain scale-[2.5] origin-left" 
 />
 
           </div>

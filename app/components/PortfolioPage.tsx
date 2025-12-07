@@ -31,10 +31,10 @@ const PortfolioPage = () => {
     const projects: Project[] = [
       {
         id: 1,
-        title: 'Prem',
+        title: 'banjar',
         year: '2025',
         category: 'Feature Film',
-        img: 'prem.png',
+        img: 'banjar.jpg',
         description: 'A heartwarming tale of love, friendship, and self-discovery.',
         views: '1.2M',
         duration: '135 min'
