@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Vayam Multimedia",
   description: "Transforming Ideas into Cinematic Excellence",
+  icons: {
+    icon: "/icon.png", // yaha aapka icon
+  },
 };
 
 export default function RootLayout({
