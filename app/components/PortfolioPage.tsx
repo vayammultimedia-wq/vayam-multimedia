@@ -41,10 +41,10 @@ const PortfolioPage = () => {
       },
       {
         id: 2,
-        title: 'Sangvi',
+        title: 'Ek Thi Dayan',
         year: '2025',
         category: 'Short Film',
-        img: 'sangvi.png',
+        img: 'ekthiDayann.png',
         description: 'A captivating short film exploring themes of hope and resilience.',
         views: '750K',
         duration: '45 min'

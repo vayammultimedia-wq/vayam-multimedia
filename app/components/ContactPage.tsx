@@ -201,8 +201,9 @@ Message: ${formData.message}
                   </div>
                   <div className="text-center">
                     <h4 className="text-white font-semibold mb-1">Phone</h4>
-                    <p className="text-gray-400">+91 98765 43210</p>
-                    <p className="text-gray-400">+91 87654 32109</p>
+                    <p className="text-gray-400">+91 82752 27244</p>
+                    <p className="text-gray-400">+91 88299 12389</p>
+                     <p className="text-gray-400">+91 83022 70668</p>
                   </div>
                 </div>
 
@@ -212,8 +213,8 @@ Message: ${formData.message}
                   </div>
                   <div className="text-center">
                     <h4 className="text-white font-semibold mb-1">Email</h4>
-                    <p className="text-gray-400">info@vayamproduction.com</p>
-                    <p className="text-gray-400">projects@vayamproduction.com</p>
+                    <p className="text-gray-400">vayam.multimedia@gmail.com</p>
+                    {/* <p className="text-gray-400">projects@vayamproduction.com</p> */}
                   </div>
                 </div>
 
@@ -224,9 +225,10 @@ Message: ${formData.message}
                   <div className="text-center">
                     <h4 className="text-white font-semibold mb-1">Studio Address</h4>
                     <p className="text-gray-400">
-                      Vayam Production House<br />
-                      Film City Complex, Sector 16A<br />
-                      Noida, Uttar Pradesh 201301
+                      Ridhi Sidhi Complex <br />
+                      Madhuban <br />
+                      udaipur - 313001, Rajasthan, India
+                      
                     </p>
                   </div>
                 </div>
@@ -275,7 +277,7 @@ Message: ${formData.message}
                 call us directly for immediate assistance.
               </p>
               <button className="px-6 py-3 bg-black text-cyan-500 font-bold rounded-lg hover:bg-gray-900 transition-colors">
-                CALL NOW: +91 98765 43210
+                CALL NOW: +91 83022 70668
               </button>
             </div>
           </div>

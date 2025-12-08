@@ -35,14 +35,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group cursor-pointer">
-            <div className="p-2">
-             <img
-  src="/Logo2.png"
-  alt="Vayam Logo"
-  className="h-10 w-auto object-contain scale-[4] origin-left"
-/>
-
-            </div>
+            
           </Link>
 
           {/* Desktop Menu */}

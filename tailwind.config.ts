@@ -21,16 +21,18 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-brand": "linear-gradient(to right, #4F46E5, #E11D48)", // Custom gradient for brand
       },
       colors: {
-        'primary-light': '#6366F1', // Indigo 500
-        'primary-dark': '#4F46E5',  // Indigo 600
-        'secondary-light': '#F472B6', // Pink 400
-        'secondary-dark': '#EC4899',  // Pink 500
-        'background-dark': '#0A0A0A', // Near black
-        'text-light': '#E5E7EB',    // Gray 200
-        'text-dark': '#1F2937',     // Gray 800
+        background: '#000000',
+        foreground: '#FFFFFF',
+        primary: '#1E40AF',
+        secondary: '#9333EA',
+        accent: '#F59E0B',
+        border: '#27272A',
+        ring: '#F59E0B',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
