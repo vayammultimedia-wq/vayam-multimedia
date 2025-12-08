@@ -33,10 +33,11 @@ const Navbar = () => {
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group cursor-pointer">
-            
-          </Link>
+        <div className="relative flex items-center justify-center">
+          {/* <Link href="/" className="absolute left-6 flex items-center gap-3 group cursor-pointer">
+            <Film className="w-6 h-6 text-cyan-500" />
+            <span className="text-white font-bold tracking-wider">VAYAM</span>
+          </Link> */}
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -66,8 +67,9 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-white hover:text-cyan-500 transition-colors" 
+            className="md:hidden p-2 text-white hover:text-cyan-500 transition-colors absolute right-6" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
