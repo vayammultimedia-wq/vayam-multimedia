@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { Play, ChevronLeft, ChevronRight, Star, Award, Film, Camera } from 'lucide-react';
 import Link from 'next/link';
 
@@ -12,13 +12,115 @@ const getImageSrc = (img: string, width: number = 1200) => {
 };
 
 const featuredMovies = [
-  { id: 1, title: "banjar", genre: "Drama", year: "2025", rating: 9.0, image: "banjar.jpg", description: "A heartwarming tale of love, friendship, and self-discovery" },
-  { id: 2, title: "Ek Thi Dayan", genre: "Thriller", year: "2025", rating: 8.5, image: "ekthiDayann.png", description: "A captivating short film exploring themes of hope and resilience" },
+  { id: 1, 
+    title: "Banjar",
+    genre: "Drama",
+    year: "2025",
+    rating: 9.0,
+    img: "banjar.jpg",
+    description: "A heartwarming tale of love, friendship, and self-discovery" 
+  },
+
+  { id: 2, 
+    title: "Ek Thi Dayan",
+   genre: "Thriller",
+   year: "2025",
+   rating: 8.5,
+  img: "ekthiDayann.png", 
+  description: "A captivating short film exploring themes of hope and resilience"
+
+ },
+   {
+        id: 3,
+        title: 'Charitra Katha',
+        year: '2023',
+        category: 'Short Film',
+        img: 'charitrakatha.jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'T-FFvLtZxIg',
+
+        
+      },
+       {
+        id: 4,
+        title: 'God Bless You ',
+        year: '2023',
+        category: 'Short Film',
+        img: 'god bless you .jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'yt479AIUsEU',
+
+      },
+       {
+        id: 5,
+        title: 'Mein Hi Kyu',
+        year: '2023',
+        category: 'Short Film',
+        img: 'main hi kyu .jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: '4xf8FQ85ykk',
+
+      },
+       {
+        id: 6,
+        title: 'Lovers',
+        year: '2023',
+        category: 'Short Film',
+        img: 'lvers.jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'cKI8hGoVPag',
+
+      },
+      {
+        id: 7,
+        title: 'Lovers 2',
+        year: '2023',
+        category: 'Short Film',
+        img: 'lovers2 .jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'DhDHZpbQlIU',
+
+      },
+       {
+        id: 8,
+        title: 'Vote Mujhe Hi Dena ',
+        year: '2023',
+        category: 'Short Film',
+        img: 'vote mujhe hi do .jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'K3Tch511CUs',
+
+      },
+        {
+        id: 9,
+        title: 'Daughter ',
+        year: '2023',
+        category: 'Short Film',
+        img: 'daughter.jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'jOrUAhF1fdM',
+
+      },
 ];
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [movieType, setMovieType] = useState('upcoming');
+  const [playingTrailerId, setPlayingTrailerId] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -75,15 +177,18 @@ const HomePage = () => {
               Where Stories Come to Life on the Silver Screen
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-wrap gap-6 justify-center">
               <Link href="/portfolio" className="px-10 py-5 bg-amber-500 text-black font-bold rounded-lg transition-transform transform hover:scale-105">
                   <span className="flex items-center gap-3">
                     <Play className="w-5 h-5" />
                     WATCH OUR FILMS
                   </span>
               </Link>
+              {/* <Link href="/gallery" className="px-10 py-5 bg-transparent border-2 border-cyan-500 text-cyan-500 font-bold rounded-lg transition-transform transform hover:scale-105 hover:bg-cyan-500 hover:text-black">
+                  VIEW GALLERY
+              </Link> */}
               <Link href="/la-musica-india" className="px-10 py-5 bg-transparent border-2 border-amber-500 text-amber-500 font-bold rounded-lg transition-transform transform hover:scale-105 hover:bg-amber-500 hover:text-black">
-                  LA MUSICA INDIA
+                  LA MÜSICA INDIA
               </Link>
               <Link href="/contact" className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-lg transition-transform transform hover:scale-105 hover:bg-white hover:text-black">
                   START YOUR PROJECT
@@ -152,7 +257,7 @@ const HomePage = () => {
                 {featuredMovies.map((movie) => (
                   <div key={movie.id} className="w-full relative shrink-0">
                     <div className="relative h-96 md:h-[500px]">
-                      <Image src={getImageSrc(movie.image, 1200)} alt={movie.title} fill className="object-cover" />
+                      <Image src={getImageSrc(movie.img, 1200)} alt={movie.title} fill className="object-cover" />
                       <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
 
                       <div className="absolute inset-0 flex items-center">
@@ -170,10 +275,15 @@ const HomePage = () => {
                             <h3 className="text-4xl md:text-6xl font-black text-white mb-4">{movie.title}</h3>
                             <p className="text-gray-300 text-lg mb-8">{movie.description}</p>
 
-                            <button className="flex items-center gap-3 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg">
-                              <Play className="w-5 h-5" />
-                              WATCH TRAILER
-                            </button>
+                            {movie.youtubeVideoId && (
+                              <button
+                                onClick={() => setPlayingTrailerId(movie.youtubeVideoId!)}
+                                className="flex items-center gap-3 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 hover:bg-cyan-500 hover:text-black"
+                              >
+                                <Play className="w-5 h-5" />
+                                WATCH TRAILER
+                              </button>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -247,6 +357,31 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      {/* Trailer Modal */}
+      {playingTrailerId && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center" onClick={() => setPlayingTrailerId(null)}>
+          <div className="relative w-full max-w-4xl aspect-video mx-4" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${playingTrailerId}?autoplay=1`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+            <button
+              onClick={() => setPlayingTrailerId(null)}
+              className="absolute -top-4 -right-4 w-10 h-10 bg-white text-black rounded-full flex items-center justify-center text-2xl font-bold"
+              aria-label="Close trailer"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* WHY CHOOSE US */}
       <div className="bg-black py-20 px-6">

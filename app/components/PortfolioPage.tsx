@@ -21,6 +21,7 @@ interface Project {
   description: string;
   awards?: string[];
   views?: string;
+  youtubeVideoId?: string;
   duration?: string;
 }
 
@@ -31,25 +32,115 @@ const PortfolioPage = () => {
     const projects: Project[] = [
       {
         id: 1,
-        title: 'banjar',
+        title: 'Banjar',
         year: '2025',
-        category: 'Feature Film',
+        category: 'Short Film',
         img: 'banjar.jpg',
         description: 'A heartwarming tale of love, friendship, and self-discovery.',
         views: '1.2M',
-        duration: '135 min'
+        duration: '135 min',
+        youtubeVideoId: 'N5LkiQ4_nT0'
       },
       {
         id: 2,
-        title: 'Ek Thi Dayan',
+        title: 'Ek Kahani Dayan Ki',
         year: '2025',
-        category: 'Short Film',
+        category: 'Feature Film',
         img: 'ekthiDayann.png',
         description: 'A captivating short film exploring themes of hope and resilience.',
         views: '750K',
-        duration: '45 min'
-      }
+        duration: '45 min',
+        youtubeVideoId: 'T-FFvLtZxIg'
+
+      },
+      
+       {
+        id: 3,
+        title: 'Charitra Katha',
+        year: '2023',
+        category: 'Short Film',
+        img: 'charitrakatha.jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'T-FFvLtZxIg',
+
+        
+      },
+       {
+        id: 4,
+        title: 'God Bless You ',
+        year: '2023',
+        category: 'Short Film',
+        img: 'god bless you .jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'yt479AIUsEU',
+
+      },
+       {
+        id: 5,
+        title: 'Mein Hi Kyu',
+        year: '2023',
+        category: 'Short Film',
+        img: 'main hi kyu .jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: '4xf8FQ85ykk',
+
+      },
+       {
+        id: 6,
+        title: 'Lovers',
+        year: '2023',
+        category: 'Short Film',
+        img: 'lvers.jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'cKI8hGoVPag',
+
+      },
+      {
+        id: 7,
+        title: 'Lovers 2',
+        year: '2023',
+        category: 'Short Film',
+        img: 'lovers2 .jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'DhDHZpbQlIU',
+
+      },
+       {
+        id: 8,
+        title: 'Vote Mujhe Hi Dena ',
+        year: '2023',
+        category: 'Short Film',
+        img: 'vote mujhe hi do .jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'K3Tch511CUs',
+
+      },
+        {
+        id: 9,
+        title: 'Daughter ',
+        year: '2023',
+        category: 'Short Film',
+        img: 'daughter.jpg',
+        description: 'A captivating short film exploring character',
+        views: '750K',
+        duration: '45 min',
+        youtubeVideoId: 'jOrUAhF1fdM',
+
+      },
     ];
+
   const categories = ['All', 'Feature Film', 'Short Film'];
 
   const filteredProjects = activeFilter === 'All' 
@@ -152,15 +243,26 @@ const PortfolioPage = () => {
       {/* Project Detail Modal */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={() => setSelectedProject(null)}>
-          <div className="max-w-5xl w-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-2xl border border-gray-700" onClick={e => e.stopPropagation()}>
-            <div className="relative aspect-video">
-              <Image
-                src={getImageSrc(selectedProject.img, 1200)}
-                alt={selectedProject.title}
-                fill
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="max-w-5xl w-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl shadow-2xl border border-gray-700 flex flex-col max-h-[90vh]" onClick={e => e.stopPropagation()}>
+            <div className="relative aspect-video rounded-t-3xl overflow-hidden">
+              {selectedProject.youtubeVideoId ? (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${selectedProject.youtubeVideoId}?autoplay=1&rel=0&controls=1`}
+                    title={selectedProject.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+              ) : (
+                  <Image
+                    src={getImageSrc(selectedProject.img, 1200)}
+                    alt={selectedProject.title}
+                    fill
+                    className="w-full h-full object-cover"
+                  />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
               <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-6 right-6 text-white hover:text-cyan-500 bg-black/50 backdrop-blur-sm rounded-full p-3 transition-colors"
@@ -174,7 +276,7 @@ const PortfolioPage = () => {
               </div>
             </div>
             
-            <div className="p-8">
+            <div className="p-8 overflow-y-auto">
               <div className="flex flex-wrap items-center gap-4 mb-6">
                 <h2 className="text-4xl font-black text-white">{selectedProject.title}</h2>
                 {selectedProject.awards && (
@@ -223,12 +325,17 @@ const PortfolioPage = () => {
               )}
               
               <div className="flex gap-4">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-cyan-500 text-black font-bold tracking-wider hover:from-cyan-500 hover:to-cyan-400 transition-all rounded-lg shadow-2xl transform hover:-translate-y-1 flex items-center gap-3">
-                  <Play className="w-5 h-5" />
-                  WATCH PROJECT
-                </button>
+                {selectedProject.youtubeVideoId && (
+                  <button className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-cyan-500 text-black font-bold tracking-wider hover:from-cyan-500 hover:to-cyan-400 transition-all rounded-lg shadow-2xl transform hover:-translate-y-1 flex items-center gap-3">
+                    <Play className="w-5 h-5" />
+                    PLAYING
+                  </button>
+                )}
                 <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-bold tracking-wider hover:bg-cyan-500 hover:text-black transition-all rounded-lg transform hover:-translate-y-1">
                   VIEW DETAILS
+                </button>
+                <button onClick={() => setSelectedProject(null)} className="px-8 py-4 border-2 border-gray-600 text-gray-400 font-bold tracking-wider hover:bg-gray-700 hover:text-white transition-all rounded-lg transform hover:-translate-y-1">
+                  CLOSE
                 </button>
               </div>
             </div>

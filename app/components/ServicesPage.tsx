@@ -9,13 +9,13 @@ const ServicesPage = () => {
       icon: <Film className="w-12 h-12" />,
       title: "Feature Film Production",
       description: "Full-scale movie production from concept to distribution, including pre-production, filming, and post-production services.",
-      features: ["Script Development", "Casting", "Location Scouting", "Full Crew", "Equipment Rental"]
+      features: ["Script Development","Story Devlopment","Shooting", "Casting", "Location Scouting", "Full Crew", "Equipment Rental"]
     },
     {
       icon: <Video className="w-12 h-12" />,
       title: "Documentary Filmmaking",
       description: "Compelling documentary production that tells powerful stories and captures real-life narratives with artistic vision.",
-      features: ["Research & Development", "Interview Setup", "Archival Footage", "Narrative Structure", "Distribution Strategy"]
+      features: ["Research & Development", "Interview Setup", "Archival Footage", "Narrative Structure", "Distribution "]
     },
     {
       icon: <Camera className="w-12 h-12" />,
@@ -27,13 +27,13 @@ const ServicesPage = () => {
       icon: <Edit className="w-12 h-12" />,
       title: "Post-Production",
       description: "Professional editing, color grading, sound design, and visual effects to bring your vision to life.",
-      features: ["Video Editing", "Color Correction", "Sound Mixing", "Visual Effects", "Motion Graphics"]
+      features: ["Video Editing", "Color Correction", "Sound Mixing", "Visual Effects", "Motion Graphics","Color correction and DI"]
     },
     {
       icon: <Mic className="w-12 h-12" />,
       title: "Audio Production",
       description: "Complete audio solutions including recording, mixing, and sound design for all types of media content.",
-      features: ["Studio Recording", "Location Sound", "Audio Post", "Music Composition", "Voice Over"]
+      features: ["Studio Recording", "Location Sound", "Audio & Video Mixing and Mastering","Lyrics Writing", "Music Composition", "Voice Over and dubbing"]
     },
     {
       icon: <Palette className="w-12 h-12" />,

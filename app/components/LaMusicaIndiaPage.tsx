@@ -7,14 +7,14 @@ const LaMusicaIndiaPage = () => {
     <div className="bg-gray-900 text-white min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r mt-10 from-cyan-600 to-cyan-500">La Musica India</h1>
-          <p className="text-xl mt-4 text-gray-300">Official Music Channel by Vayam Multimedia</p>
+          <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r mt-10 from-cyan-600 to-cyan-500">La Música India</h1>
+          <p className="text-xl mt-4 text-gray-300">Official Music Creator Channel by Vayam Multimedia</p>
           <p className="text-lg mt-2 font-light text-gray-400">Discover New Sounds. Celebrate Independent Talent. Feel the Music.</p>
         </div>
 
         <div className="max-w-4xl mx-auto bg-gray-800 rounded-lg shadow-lg p-8 mb-12">
           <p className="text-lg text-gray-300 leading-relaxed">
-            La Musica India is the official YouTube music channel by Vayam Multimedia, created to promote fresh musical talent, soulful independent artists, and high-quality music production from across India. As a growing entertainment brand, our mission is to bring original music, covers, unplugged sessions, devotional tracks, rap/hip-hop, and culturally rich compositions to a global audience.
+            La Música India is the official YouTube music channel by Vayam Multimedia, created to promote fresh musical talent, soulful independent artists, and high-quality music production from across India. As a growing entertainment brand, our mission is to bring original music, covers, unplugged sessions, devotional tracks, rap/hip-hop, and culturally rich compositions to a global audience.
           </p>
           <p className="text-lg text-gray-300 leading-relaxed mt-4">
             Backed by Vayam Multimedia’s in-house production expertise, La Musica India is becoming a hub for creative artists, cinematographers, and sound producers who want to deliver meaningful, impactful music.
@@ -55,7 +55,7 @@ const LaMusicaIndiaPage = () => {
 
         <div className="max-w-6xl mx-auto my-12">
           <h2 className="text-4xl font-bold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Featured Videos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="relative" style={{ paddingTop: '56.25%' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
@@ -69,7 +69,7 @@ const LaMusicaIndiaPage = () => {
             <div className="relative" style={{ paddingTop: '56.25%' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-                src="https://www.youtube.com/embed/qn8NCKyg4Qk"
+                src="https://www.youtube.com/embed/pPhQ_Q4cl2s"
                 title="YouTube video player 2"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -89,8 +89,68 @@ const LaMusicaIndiaPage = () => {
             <div className="relative" style={{ paddingTop: '56.25%' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-                src="https://www.youtube.com/embed/_jgz_9NBzYk"
+                src="https://www.youtube.com/embed/TE9nBk6qlc4"
                 title="YouTube video player 4"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/_jgz_9NBzYk"
+                title="YouTube video player 5"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/qn8NCKyg4Qk"
+                title="YouTube video player 6"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/KMWqd5U_0A8"
+                title="YouTube video player 8"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/liI6Obr-gWY"
+                title="YouTube video player 9"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/6eFTvr-kZd8"
+                title="YouTube video player 7"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                 src="https://www.youtube.com/embed/LTVt3ePys9k"  
+                title="YouTube video player 7"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

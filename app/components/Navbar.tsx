@@ -16,6 +16,10 @@ const Navbar = () => {
     { href: '/portfolio', label: 'Portfolio' },
     { href: '/services', label: 'Services' },
     { href: '/contact', label: 'Contact' },
+    { href: '/gallery', label: 'Gallery' },
+    // { href: '/event', label: 'Events' },
+
+
   ];
 
   useEffect(() => {
