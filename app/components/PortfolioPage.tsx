@@ -39,7 +39,7 @@ const PortfolioPage = () => {
         description: 'A heartwarming tale of love, friendship, and self-discovery.',
         views: '1.2M',
         duration: '135 min',
-        youtubeVideoId: 'N5LkiQ4_nT0'
+        youtubeVideoId: ''
       },
       {
         id: 2,
